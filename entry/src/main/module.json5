@@ -2,6 +2,7 @@
   "module": {
     "name": "entry",
     "type": "entry",
+    "srcEntry": "./ets/myAbilityStage/MyAbilityStage.ts",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "deviceTypes": [
@@ -15,6 +16,7 @@
       {
         "name": "EntryAbility",
         "srcEntry": "./ets/entryability/EntryAbility.ts",
+        // "launchType": "standard",
         "description": "$string:EntryAbility_desc",
         "icon": "$media:icon",
         "label": "$string:EntryAbility_label",
@@ -27,8 +29,47 @@
               "entity.system.home"
             ],
             "actions": [
-              "action.system.home"
+              "action.system.home",
+              "ohos.want.action.choose"
             ]
+          }
+        ]
+      },
+      {
+        "name": "SecondAbility",
+        "srcEntry": "./ets/entryability/SecondAbility.ts",
+        "description": "$string:SecondAbility_desc",
+        "icon": "$media:1",
+        "label": "$string:SecondAbility_label",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background"
+      }
+    ],
+    "requestPermissions": [
+      //      {
+      //        "name" : "ohos.permission.SYSTEM_FLOAT_WINDOW",
+      //        "usedScene": {
+      //          "abilities": [
+      //            "EntryAbility"
+      //          ],
+      //          "when": "inuse"
+      //        }
+      //      }
+      {
+        "name": "ohos.permission.PUBLISH_AGENT_REMINDER"
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "EntryFormAbility",
+        "srcEntry": "./ets/entryformability/EntryFormAbility.ts",
+        "label": "$string:EntryFormAbility_label",
+        "description": "$string:EntryFormAbility_desc",
+        "type": "form",
+        "metadata": [
+          {
+            "name": "ohos.extension.form",
+            "resource": "$profile:form_config"
           }
         ]
       }

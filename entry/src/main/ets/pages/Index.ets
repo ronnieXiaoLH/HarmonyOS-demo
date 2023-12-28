@@ -9,12 +9,15 @@ import { RenderController } from '../components/renderController'
 import { PageRouter } from '../components/pageRouter'
 import { GraphComponent } from '../components/graphComponent'
 import { AnimateComponent } from '../components/animateComponent'
+import { WindowManagementComponent } from '../components/windowManagement'
+import { NotificationManagement } from '../components/notificationManagement'
+import { AbilityManagement } from '../components/abilityManagement'
 
 @Entry
 @Component
 struct Index {
   build() {
-    Tabs({ index: 8 }) {
+    Tabs({ index: 11 }) {
       TabContent() {
         DeclarativeUiComponent()
       }
@@ -68,10 +71,28 @@ struct Index {
       }
       .tabBar("动画")
       .tabIndex(8)
+
+      TabContent() {
+        WindowManagementComponent()
+      }
+      .tabBar("窗口管理")
+      .tabIndex(9)
+
+      TabContent() {
+        NotificationManagement()
+      }
+      .tabBar("通知")
+      .tabIndex(10)
+
+      TabContent() {
+        AbilityManagement()
+      }
+      .tabBar("Ability交互")
+      .tabIndex(11)
     }
     .vertical(true)
     .barWidth(100)
-    .barHeight(300)
+    .barHeight('100%')
   }
 
   pageTransition() {

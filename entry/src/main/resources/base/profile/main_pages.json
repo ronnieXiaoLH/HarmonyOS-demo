@@ -2,6 +2,9 @@
   "src": [
     "pages/Index",
     "pages/Second",
-    "pages/Detail"
+    "pages/Detail",
+    "pages/SubWindow",
+    "pages/FloatWindow",
+    "pages/SecondAbility"
   ]
 }

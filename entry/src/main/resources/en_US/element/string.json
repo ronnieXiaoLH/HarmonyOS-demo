@@ -11,6 +11,22 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "SecondAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "SecondAbility_label",
+      "value": "label2"
+    },
+    {
+      "name": "EntryFormAbility_desc",
+      "value": "form_description"
+    },
+    {
+      "name": "EntryFormAbility_label",
+      "value": "form_label"
     }
   ]
 }
